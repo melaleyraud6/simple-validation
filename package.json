@@ -1,5 +1,7 @@
 {
   "name": "simple-validation",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.5.0"
+  }
 }
