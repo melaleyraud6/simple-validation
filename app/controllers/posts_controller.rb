@@ -6,9 +6,18 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     if @post.save
-      redirect_to root_path
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.json
+      end
+    else
+      render :new  
     end
-      render :new 
+    # if @post.save
+    #   redirect_to root_path and return
+    # else
+    #   render :new   and return
+    # end
   end
 
   private
